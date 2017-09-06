@@ -1,0 +1,3 @@
+include 'spring-boot-webapp', 'react-front-end-module'
+
+rootProject.name = 'react-spring-boot-demo'

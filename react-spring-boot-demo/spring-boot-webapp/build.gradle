@@ -1,0 +1,18 @@
+
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-spring-boot'
+    version =  '0.1.0'
+}
+
+dependencies {
+    compile project(':react-front-end-module')
+    compile 'org.springframework.boot:spring-boot-devtools'
+
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+    testCompile("junit:junit")
+}

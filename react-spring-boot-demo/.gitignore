@@ -1,0 +1,7 @@
+.gradle
+.idea
+--/build/
+build
+react-front-end-module/src/main/webapp/react/node_modules
+react-front-end-module/src/main/resources/public/js/bundle.js
+react-front-end-module/src/main/resources/public/js/bundle.js.map
