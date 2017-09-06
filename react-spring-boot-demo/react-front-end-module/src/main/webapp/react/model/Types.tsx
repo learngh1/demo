@@ -1,14 +1,14 @@
-export type UserDetailsType = {selectedUserId: number; user: UserType; isFetching: boolean}
+export type UserDetailsStore = {selectedUserId: number; user: User; isFetching: boolean}
 
-export type UserType = {
+export type User = {
     id: number;
     name: string;
     desc: string;
 }
 
-export type UserListStore = {data: UserType[]; isFetching: boolean}
+export type UserListStore = {data: User[]; isFetching: boolean}
 
 export type AllTypesCombined = {
     userList: UserListStore,
-    userDetails: UserDetailsType
+    userDetails: UserDetailsStore
 }

@@ -1,10 +1,10 @@
 import {API} from "./API";
 
 import * as fetch from 'isomorphic-fetch'
-import {UserType} from "../model/Types";
+import {User} from "../model/Types";
 
 class APIStubImpl implements API {
-    fetchUserDetails(id: number, callback: (user: UserType) => void): void {
+    fetchUserDetails(id: number, callback: (user: User) => void): void {
         console.log('apiSTUB: fetchUD id=' + id);
 
         fetch('http://swapi.co/api/people/1/')
@@ -17,7 +17,7 @@ class APIStubImpl implements API {
             })
     }
 
-    fetchUserList(callback: (data: UserType[]) => void): void {
+    fetchUserList(callback: (data: User[]) => void): void {
         console.log('apiSTUB: fetchUserList');
 
         fetch('http://swapi.co/api/people/1/')

@@ -2,12 +2,12 @@ import * as React from 'react'
 
 import { connect } from 'react-redux'
 import './UserDetailsComponent.less';
-import {AllTypesCombined, UserType} from "../model/Types";
+import {AllTypesCombined, User} from "../model/Types";
 
 type OwnProps = {}
 
 type ConnectedState = {
-    userDetailsStore: {selectedUserId: number, user: UserType, isFetching: boolean}
+    userDetailsStore: {selectedUserId: number, user: User, isFetching: boolean}
 }
 
 const mapStateToProps = (state: AllTypesCombined, ownProps: OwnProps): ConnectedState => ({

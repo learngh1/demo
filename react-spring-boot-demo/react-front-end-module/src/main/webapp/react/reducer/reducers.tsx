@@ -4,7 +4,7 @@ import {Action, finishedLoadUserListAction, finishedLoadUserDetailsAction} from 
 import {STUB_API} from "../api/STUB_API";
 import {REAL_API} from "../api/REAL_API";
 import {API} from "../api/API";
-import {UserDetailsType, UserType, UserListStore, AllTypesCombined} from "../model/Types";
+import {UserDetailsStore, User, UserListStore, AllTypesCombined} from "../model/Types";
 
 
 let api : API = REAL_API;
@@ -13,12 +13,12 @@ if (process.env.NODE_ENV == 'dev') {
 }
 
 //TODO: move each reducer to separate files
-function userDetailsReducer(state: UserDetailsType = {selectedUserId: null, user: null, isFetching: false}, action: Action) : UserDetailsType {
+function userDetailsReducer(state: UserDetailsStore = {selectedUserId: null, user: null, isFetching: false}, action: Action) : UserDetailsStore {
     switch (action.type) {
         case 'START_LOAD_USER_DETAILS_ACTION':
 
             let selectedUserId = action.selectedUserId;
-            api.fetchUserDetails(selectedUserId, (user: UserType) => action.dispatch(finishedLoadUserDetailsAction(user)))
+            api.fetchUserDetails(selectedUserId, (user: User) => action.dispatch(finishedLoadUserDetailsAction(user)))
 
             return  {...state, selectedUserId: selectedUserId, isFetching: true}
         case 'FINISHED_LOAD_USER_DETAILS_ACTION':
@@ -34,7 +34,7 @@ function userListReducer(state: UserListStore = {data: [], isFetching: false}, a
         case 'FINISHED_LOAD_USER_LIST_ACTION':
             return {data: action.data, isFetching: false}
         case 'START_LOAD_USER_LIST_ACTION':
-            api.fetchUserList((data: UserType[]) => action.dispatch(finishedLoadUserListAction(data)))
+            api.fetchUserList((data: User[]) => action.dispatch(finishedLoadUserListAction(data)))
             return {data: state.data, isFetching: true}
         default:
             return state
