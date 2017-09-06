@@ -16,7 +16,6 @@ let store = applyMiddleware(thunk)(devtools(createStore))(reducers, {} as AllTyp
 (window as any).renderTestComp = (node: any, param: any, param2: any) => {
     ReactDOM.render(
         <div>
-            NODE_ENV={process.env.NODE_ENV}
             <Provider store={store}>
                 <span>
                     <UserListComp />

@@ -8,6 +8,7 @@ import {UserDetailsStore, User, UserListStore, AllTypesCombined} from "../model/
 
 
 let api : API = REAL_API;
+
 if (process.env.NODE_ENV == 'dev') {
     api = STUB_API;
 }
