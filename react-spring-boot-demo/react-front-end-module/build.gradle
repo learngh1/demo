@@ -15,5 +15,5 @@ node {
 task webpack (type: NpmTask) {
   args = ['run', 'wpbuild']
 }
-
+webpack.dependsOn(npmInstall)
 processResources.dependsOn(webpack)
