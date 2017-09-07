@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "main.js",
   "scripts": {
-    "devserver": "webpack-dev-server --define process.env.NODE_ENV='\"dev\"' --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base ../../resources/public/ --port 8090"
+    "devserver": "webpack-dev-server --define process.env.NODE_ENV='\"dev\"' --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base ../../resources/public/ --port 8090",
+    "wpbuild": "webpack --config webpack.config.js"
   },
   "author": "user",
   "dependencies": {
