@@ -1,4 +1,4 @@
-# react-spring-boot-app
+# [react-spring-boot-app](react-spring-boot-app)
 ## Overview
 This web app demonstrates basics of usage ReactJS+Redux+Typescript as client side tech and Spring Boot as server side tech. App uses gradle as build tool. Root gradle project consists of two modules. First one is react-front-end-module - it shows interaction between react components, data flow and communication with server. The second is spring-boot-webapp - contains embedded web-server and provides simple REST service.
 
