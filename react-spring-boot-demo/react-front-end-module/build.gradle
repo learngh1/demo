@@ -1,0 +1,19 @@
+plugins {
+  id "com.moowork.node" version "1.2.0"
+}
+
+node {
+  // If true, it will download node using above parameters.
+  // If false, it will try to use globally installed node.
+  download = false
+
+  // Set the work directory where node_modules should be located
+  nodeModulesDir = file("${project.projectDir}/src/main/webapp/react")
+
+}
+
+task webpack (type: NpmTask) {
+  args = ['run', 'wpbuild']
+}
+
+processResources.dependsOn(webpack)
