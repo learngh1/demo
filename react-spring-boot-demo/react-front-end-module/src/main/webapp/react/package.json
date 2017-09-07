@@ -1,14 +1,13 @@
 {
-  "name": "gro-maket",
+  "name": "react-front-end-module",
   "version": "0.0.1",
-  "description": "GRO Maket",
   "main": "main.js",
   "scripts": {
     "devserver": "webpack-dev-server --define process.env.NODE_ENV='\"dev\"' --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base ../../resources/public/ --port 8090"
   },
   "author": "user",
   "dependencies": {
-    "@types/isomorphic-fetch": "^1.6.7",
+    "@types/isomorphic-fetch": "0.0.34",
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
