@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="img/clover.ico" />
+
+    <link rel="stylesheet" href="aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('style.css');
+        @import url('tree.css');
+        
+    </style>
+
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="package-nodes-tree.js" type="text/javascript"></script>
+    <script src="clover-tree.js" type="text/javascript"></script>
+    <script src="clover.js" type="text/javascript"></script>
+    <script src="clover-descriptions.js" type="text/javascript"></script>
+    <script src="cloud.js" type="text/javascript"></script>
+
+            <title>stripe-api Coverage Report</title>
+    </head>
+
+<body onresize="processTreeMapDashJson(treeMapJson);" >
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="http://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="http://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                                        stripe-api Coverage Report
+                                </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="aui-nav-selected">
+                    <a href="dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                  <div class="packages-tree-wrapper" data-root-relative="" data-package-name="">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <ol class="aui-nav aui-nav-breadcrumbs">
+            
+        <li><a href="dashboard.html">Project Clover database Чт апр 19 2018 21:11:54 AST</a></li>
+    </ol>
+    
+<h1 class="aui-h2-clover">
+            Project overview
+    </h1>
+<div class="aui-tabs horizontal-tabs">
+        <ul class="tabs-menu">
+            <li class="menu-item active-tab">
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+                <li class="menu-item ">
+            <a href="pkg-summary.html"><strong>Application code</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="testsrc-pkg-summary.html"><strong>Test code</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="test-pkg-summary.html"><strong>Test results</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="top-risks.html"><strong>Top risks</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="quick-wins.html"><strong>Quick wins</strong></a>
+        </li>
+                                                <li class="menu-item ">
+                <a href="treemap.html"><strong>Coverage tree map</strong></a>
+            </li>
+            </ul>
+    <div class="tabs-pane active-pane" id="tabs-first">
+
+        <div>&#160;</div>
+
+
+
+
+
+
+<div class="aui-group">
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                
+                <h3>
+                    Code coverage
+                    <small style="float:right; font-weight: normal">
+                        58 classes,
+                        1 073 /
+                        1 107 elements
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9692864</span>96,9%</div><div style="display: table-cell">
+ <div title="96,9% Covered"  style="min-width:200px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:96.9%"></div></div></div></div>
+                <p><a href="pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    Test results
+                    <small style="float:right; font-weight: normal">
+                        97 /
+                        97 tests
+                        20,27 secs
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                                    
+
+<div style="display: table; width: 100%">
+            <div class="barGraphValue"><span class="sortValue">1.0</span>100%</div>         <div style="display: table-cell">
+            
+            <div title="0% Errors" style="min-width: 40px;" class="testBarError">
+                <div title="100% of tests passed&lt;br/&gt;0% of tests failed" class="testBarFail" style="width: 100%"><div class="testBarPass" style="width: 100%"></div></div>
+            </div>
+        </div>
+    </div>                                <p><a href="test-pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Code metrics</h3>
+            </header>
+                         
+
+<div id="$statsId" class="aui-item" style="display: ${display}">
+<div style="display: table">
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of branches in this project">Branches:</label></div>
+        <div class="stats-box-value">310</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of statements in this project">Statements:</label></div>
+        <div class="stats-box-value">625</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of methods in this project">Methods:</label></div>
+        <div class="stats-box-value">172</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of classes in this project">Classes:</label></div>
+        <div class="stats-box-value">58</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of files in this project">Files:</label></div>
+            <div class="stats-box-value">58</div>
+        </div>
+                <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of packages in this project">Packages:</label></div>
+            <div class="stats-box-value">22</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of lines of code in this project">LOC:</label></div>
+        <div class="stats-box-value">2 312</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of non-comment lines of code in this project">NCLOC:</label></div>
+        <div class="stats-box-value">1 892</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Cyclomatic complexity is the number of paths in this project">Total complexity:</label></div>
+        <div class="stats-box-value">339</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label">
+            <label title="Complexity density is the complexity divided by the number of statements in this project">Complexity density:</label>
+        </div>
+        <div class="stats-box-value">0,54</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of statements per method.">Statements/Method:</label></div>
+        <div class="stats-box-value">3,63</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of methods per class.">Methods/Class:</label></div>
+        <div class="stats-box-value">2,97</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Number of classes per package.">Classes/Package:</label></div>
+            <div class="stats-box-value">2,64</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Complexity divided by the number of methods in this project">Average method complexity:</label></div>
+        <div class="stats-box-value">1,97</div>
+    </div>
+</div>
+
+</div>        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Coverage Distribution</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">                     <img src="img/classDistrubutionChart.png" alt="img/classDistrubutionChart.png" usemap="#classDistrubutionChart.png"/>
+                </div>
+                <map id="classDistrubutionChart.png" name="classDistrubutionChart.png">
+<area shape="rect" coords="288,15,310,205" title="24 classes have 91-100% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="263,198,285,205" title="1 class has 81-90% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="238,190,260,205" title="2 classes have 71-80% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="213,190,235,205" title="2 classes have 61-70% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="38,198,60,205" title="1 class has 0% coverage" alt="" nohref="nohref"/>
+</map>
+            </div>
+        </div>
+        
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Complexity</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">
+                    <img src="img/classComplexityChart.png" alt="img/classComplexityChart.png" usemap="#classComplexityChart.png"/>
+                </div>
+                <map id="classComplexityChart.png" name="classComplexityChart.png">
+<area shape="poly" coords="267,175,264,177,262,175,264,172,267,175,267,175" title="Complexity: 7; Coverage: 85%; Class: ShippingDetailsModelImpl" alt="" href="com/example/stripe/impl/model/shipping/ShippingDetailsModelImpl.html#ShippingDetailsModelImpl"/>
+<area shape="poly" coords="304,175,302,177,299,175,302,172,304,175,304,175" title="Complexity: 7; Coverage: 100%; Class: ShippingMethodModelImpl" alt="" href="com/example/stripe/impl/model/shipping/ShippingMethodModelImpl.html#ShippingMethodModelImpl"/>
+<area shape="poly" coords="304,160,302,163,299,160,302,158,304,160,304,160" title="Complexity: 10; Coverage: 100%; Class: PackageDimensionsModelImpl" alt="" href="com/example/stripe/impl/model/shipping/PackageDimensionsModelImpl.html#PackageDimensionsModelImpl"/>
+<area shape="poly" coords="207,122,204,125,202,122,204,120,207,122,207,122" title="Complexity: 18; Coverage: 61%; Class: AddressModelImpl" alt="" href="com/example/stripe/impl/model/shipping/AddressModelImpl.html#AddressModelImpl"/>
+<area shape="poly" coords="304,98,302,101,299,98,302,96,304,98,304,98" title="Complexity: 23; Coverage: 100%; Class: OrderItemConverter" alt="" href="com/example/stripe/stripe_depended/converter/order/OrderItemConverter.html#OrderItemConverter"/>
+<area shape="poly" coords="304,18,302,20,299,18,302,15,304,18,304,18" title="Complexity: 40; Coverage: 100%; Class: OrderConverter" alt="" href="com/example/stripe/stripe_depended/converter/order/OrderConverter.html#OrderConverter"/>
+<area shape="poly" coords="304,146,302,149,299,146,302,144,304,146,304,146" title="Complexity: 13; Coverage: 100%; Class: ProductModelImpl" alt="" href="com/example/stripe/impl/model/product/ProductModelImpl.html#ProductModelImpl"/>
+<area shape="poly" coords="304,56,302,58,299,56,302,53,304,56,304,56" title="Complexity: 32; Coverage: 100%; Class: SKUConverter" alt="" href="com/example/stripe/stripe_depended/converter/sku/SKUConverter.html#SKUConverter"/>
+<area shape="poly" coords="304,198,302,201,299,198,302,196,304,198,304,198" title="Complexity: 2; Coverage: 100%; Class: ProductType" alt="" href="com/example/stripe/api/model/product/ProductType.html#ProductType"/>
+<area shape="poly" coords="304,194,302,196,299,194,302,191,304,194,304,194" title="Complexity: 3; Coverage: 100%; Class: ProductServiceImpl" alt="" href="com/example/stripe/stripe_depended/service/ProductServiceImpl.html#ProductServiceImpl"/>
+<area shape="poly" coords="54,203,52,206,49,203,52,201,54,203,54,203" title="Complexity: 1; Coverage: 0%; Class: ChargeServiceImpl" alt="" href="com/example/stripe/stripe_depended/service/ChargeServiceImpl.html#ChargeServiceImpl"/>
+<area shape="poly" coords="304,194,302,196,299,194,302,191,304,194,304,194" title="Complexity: 3; Coverage: 100%; Class: ProductServiceImpl" alt="" href="com/example/stripe/stripe_depended/service/ProductServiceImpl.html#ProductServiceImpl"/>
+<area shape="poly" coords="289,179,287,182,284,179,287,177,289,179,289,179" title="Complexity: 6; Coverage: 94%; Class: OrderServiceImpl" alt="" href="com/example/stripe/stripe_depended/service/OrderServiceImpl.html#OrderServiceImpl"/>
+<area shape="poly" coords="284,84,282,87,279,84,282,82,284,84,284,84" title="Complexity: 26; Coverage: 92%; Class: OrderModelImpl" alt="" href="com/example/stripe/impl/model/order/OrderModelImpl.html#OrderModelImpl"/>
+<area shape="poly" coords="287,141,284,144,282,141,284,139,287,141,287,141" title="Complexity: 14; Coverage: 93%; Class: OrderItemModelImpl" alt="" href="com/example/stripe/impl/model/order/OrderItemModelImpl.html#OrderItemModelImpl"/>
+<area shape="poly" coords="304,194,302,196,299,194,302,191,304,194,304,194" title="Complexity: 3; Coverage: 100%; Class: ProductServiceImpl" alt="" href="com/example/stripe/stripe_depended/service/ProductServiceImpl.html#ProductServiceImpl"/>
+<area shape="poly" coords="254,194,252,196,249,194,252,191,254,194,254,194" title="Complexity: 3; Coverage: 80%; Class: FieldRequiredException" alt="" href="com/example/stripe/impl/exception/FieldRequiredException.html#FieldRequiredException"/>
+<area shape="poly" coords="304,203,302,206,299,203,302,201,304,203,304,203" title="Complexity: 1; Coverage: 100%; Class: InvalidInventoryValueException" alt="" href="com/example/stripe/impl/exception/InvalidInventoryValueException.html#InvalidInventoryValueException"/>
+<area shape="poly" coords="219,198,217,201,214,198,217,196,219,198,219,198" title="Complexity: 2; Coverage: 66%; Class: InvalidProductTypeException" alt="" href="com/example/stripe/impl/exception/InvalidProductTypeException.html#InvalidProductTypeException"/>
+<area shape="poly" coords="304,203,302,206,299,203,302,201,304,203,304,203" title="Complexity: 1; Coverage: 100%; Class: InvalidInventoryValueException" alt="" href="com/example/stripe/impl/exception/InvalidInventoryValueException.html#InvalidInventoryValueException"/>
+<area shape="poly" coords="304,141,302,144,299,141,302,139,304,141,304,141" title="Complexity: 14; Coverage: 100%; Class: SKUModelImpl" alt="" href="com/example/stripe/impl/model/sku/SKUModelImpl.html#SKUModelImpl"/>
+<area shape="poly" coords="304,160,302,163,299,160,302,158,304,160,304,160" title="Complexity: 10; Coverage: 100%; Class: PackageDimensionsModelImpl" alt="" href="com/example/stripe/impl/model/shipping/PackageDimensionsModelImpl.html#PackageDimensionsModelImpl"/>
+<area shape="poly" coords="304,137,302,139,299,137,302,134,304,137,304,137" title="Complexity: 15; Coverage: 100%; Class: PackageDimensionsConverter" alt="" href="com/example/stripe/stripe_depended/converter/shipping/PackageDimensionsConverter.html#PackageDimensionsConverter"/>
+<area shape="poly" coords="304,108,302,111,299,108,302,106,304,108,304,108" title="Complexity: 21; Coverage: 100%; Class: AddressConverter" alt="" href="com/example/stripe/stripe_depended/converter/shipping/AddressConverter.html#AddressConverter"/>
+<area shape="poly" coords="304,137,302,139,299,137,302,134,304,137,304,137" title="Complexity: 15; Coverage: 100%; Class: PackageDimensionsConverter" alt="" href="com/example/stripe/stripe_depended/converter/shipping/PackageDimensionsConverter.html#PackageDimensionsConverter"/>
+<area shape="poly" coords="304,160,302,163,299,160,302,158,304,160,304,160" title="Complexity: 10; Coverage: 100%; Class: PackageDimensionsModelImpl" alt="" href="com/example/stripe/impl/model/shipping/PackageDimensionsModelImpl.html#PackageDimensionsModelImpl"/>
+<area shape="poly" coords="304,198,302,201,299,198,302,196,304,198,304,198" title="Complexity: 2; Coverage: 100%; Class: ProductType" alt="" href="com/example/stripe/api/model/product/ProductType.html#ProductType"/>
+<area shape="poly" coords="304,184,302,187,299,184,302,182,304,184,304,184" title="Complexity: 5; Coverage: 100%; Class: StripeAuthProviderImpl" alt="" href="com/example/stripe/impl/model/StripeAuthProviderImpl.html#StripeAuthProviderImpl"/>
+<area shape="poly" coords="304,94,302,96,299,94,302,91,304,94,304,94" title="Complexity: 24; Coverage: 100%; Class: ProductConverter" alt="" href="com/example/stripe/stripe_depended/converter/product/ProductConverter.html#ProductConverter"/>
+<area shape="poly" coords="244,170,242,172,239,170,242,167,244,170,244,170" title="Complexity: 8; Coverage: 76%; Class: InventoryModel" alt="" href="com/example/stripe/impl/model/sku/inventory/InventoryModel.html#InventoryModel"/>
+</map>
+            </div>
+        </div>
+        
+                    <div class="dashboard-widget">
+                <header class="dashboard-widget-header">
+                    <h3>Coverage tree map</h3>
+                </header>
+                <div class="dashboard-widget-content">
+                    <div id="infovis" style="width:100%; height:250px;">
+                        <div id="treemap-loader" style="position:relative;top:50px;">
+                            <p>
+                                Generating Coverage Tree Map. Please wait...
+                            </p>
+                            <p>
+                                <img src="img/ajax-loader.gif" alt="Loading Treemap"/>
+                            </p>
+                        </div>
+                    </div>
+                    <p><a href="treemap.html">See more</a></p>
+                </div>
+
+            </div>
+            </div>
+
+
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Top 14 project risks</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                                                                <a class="tag" href="com/example/stripe/stripe_depended/service/OrderServiceImpl.html"
+                            style="font-size: 28px;color:#89c495"
+                            title="Average Method Complexity - 1,5 , Coverage - 94,4% ">OrderServiceImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/order/OrderItemModelImpl.html"
+                            style="font-size: 23px;color:#89c495"
+                            title="Average Method Complexity - 1,077 , Coverage - 93,8% ">OrderItemModelImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/order/OrderModelImpl.html"
+                            style="font-size: 22px;color:#89c495"
+                            title="Average Method Complexity - 1 , Coverage - 92,6% ">OrderModelImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/shipping/ShippingDetailsModelImpl.html"
+                            style="font-size: 22px;color:#14892c"
+                            title="Average Method Complexity - 1 , Coverage - 85,7% ">ShippingDetailsModelImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/shipping/AddressModelImpl.html"
+                            style="font-size: 24px;color:#f6c342"
+                            title="Average Method Complexity - 1,2 , Coverage - 61,5% ">AddressModelImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/exception/FieldRequiredException.html"
+                            style="font-size: 22px;color:#14892c"
+                            title="Average Method Complexity - 1 , Coverage - 80% ">FieldRequiredException</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/sku/inventory/InventoryModel.html"
+                            style="font-size: 22px;color:#fae1a0"
+                            title="Average Method Complexity - 1 , Coverage - 76,5% ">InventoryModel</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/exception/InvalidProductTypeException.html"
+                            style="font-size: 22px;color:#f6c342"
+                            title="Average Method Complexity - 1 , Coverage - 66,7% ">InvalidProductTypeException</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/stripe_depended/service/ChargeServiceImpl.html"
+                            style="font-size: 22px;color:#d04437"
+                            title="Average Method Complexity - 1 , Coverage - 0% ">ChargeServiceImpl</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/sku/inventory/InventoryValue.html"
+                            style="font-size: 12px;color:#d04437"
+                            title="Average Method Complexity - 0 , Coverage -  -  ">InventoryValue</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/sku/inventory/InventoryType.html"
+                            style="font-size: 12px;color:#d04437"
+                            title="Average Method Complexity - 0 , Coverage -  -  ">InventoryType</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/impl/model/StripeAuthProvider.html"
+                            style="font-size: 12px;color:#d04437"
+                            title="Average Method Complexity - 0 , Coverage -  -  ">StripeAuthProvider</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/api/model/order/OrderItemType.html"
+                            style="font-size: 12px;color:#d04437"
+                            title="Average Method Complexity - 0 , Coverage -  -  ">OrderItemType</a>
+                                    
+                                                                <a class="tag" href="com/example/stripe/api/model/order/OrderStatus.html"
+                            style="font-size: 12px;color:#d04437"
+                            title="Average Method Complexity - 0 , Coverage -  -  ">OrderStatus</a>
+                                                    <p><a href="top-risks.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex packages</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a href="com/example/stripe/stripe_depended/converter/order/pkg-summary.html">com.example.stripe.stripe_depended.converter.order</a>
+                                <span class="aui-badge" title="Package complexity">63</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a href="com/example/stripe/stripe_depended/converter/shipping/pkg-summary.html">com.example.stripe.stripe_depended.converter.shipping</a>
+                                <span class="aui-badge" title="Package complexity">61</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.80898875</span>80,9%</div><div style="display: table-cell">
+ <div title="80,9% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:80.9%"></div></div></div></div></td>
+                            <td>
+                                <a href="com/example/stripe/impl/model/shipping/pkg-summary.html">com.example.stripe.impl.model.shipping</a>
+                                <span class="aui-badge" title="Package complexity">42</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>4. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9302326</span>93%</div><div style="display: table-cell">
+ <div title="93% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:93%"></div></div></div></div></td>
+                            <td>
+                                <a href="com/example/stripe/impl/model/order/pkg-summary.html">com.example.stripe.impl.model.order</a>
+                                <span class="aui-badge" title="Package complexity">40</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>5. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a href="com/example/stripe/stripe_depended/converter/sku/pkg-summary.html">com.example.stripe.stripe_depended.converter.sku</a>
+                                <span class="aui-badge" title="Package complexity">32</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex classes</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="com/example/stripe/stripe_depended/converter/order/OrderConverter.html"  title="com.example.stripe.stripe_depended.converter.order.OrderConverter">OrderConverter</a>
+                                <span class="aui-badge" title="Class complexity">40</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="com/example/stripe/stripe_depended/converter/sku/SKUConverter.html"  title="com.example.stripe.stripe_depended.converter.sku.SKUConverter">SKUConverter</a>
+                                <span class="aui-badge" title="Class complexity">32</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9259259</span>92,6%</div><div style="display: table-cell">
+ <div title="92,6% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:92.6%"></div></div></div></div></td>
+                            <td>
+                                <a  href="com/example/stripe/impl/model/order/OrderModelImpl.html"  title="com.example.stripe.impl.model.order.OrderModelImpl">OrderModelImpl</a>
+                                <span class="aui-badge" title="Class complexity">26</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>4. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="com/example/stripe/stripe_depended/converter/product/ProductConverter.html"  title="com.example.stripe.stripe_depended.converter.product.ProductConverter">ProductConverter</a>
+                                <span class="aui-badge" title="Class complexity">24</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>5. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="com/example/stripe/stripe_depended/converter/order/OrderItemConverter.html"  title="com.example.stripe.stripe_depended.converter.order.OrderItemConverter">OrderItemConverter</a>
+                                <span class="aui-badge" title="Class complexity">23</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Least tested methods</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+
+                    <tr>
+                        <td align="right">1.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="AddressModelImpl.equals(Object)&#160;:&#160;boolean" href="com/example/stripe/impl/model/shipping/AddressModelImpl.html?line=88#src-88">AddressModelImpl.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">4</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">2.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="InventoryModel.InventoryModel(Integer,InventoryType,InventoryValue)" href="com/example/stripe/impl/model/sku/inventory/InventoryModel.html?line=12#src-12">InventoryModel.InventoryModel(Integer,InventoryType,InventoryValue)</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">3.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="OrderModelImpl.OrderModelImpl(String,List&lt;OrderItemModel&gt;,ShippingDetailsModel)" href="com/example/stripe/impl/model/order/OrderModelImpl.html?line=31#src-31">OrderModelImpl.OrderModelImpl(String,List&lt;OrderItemModel&gt;,ShippingDetailsModel)</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">4.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ChargeServiceImpl.retrieve(String,StripeAuthProvider)&#160;:&#160;Charge" href="com/example/stripe/stripe_depended/service/ChargeServiceImpl.html?line=13#src-13">ChargeServiceImpl.retrieve(String,StripeAuthProvider)&#160;:&#160;Charge</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">5.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="OrderItemModelImpl.toString()&#160;:&#160;String" href="com/example/stripe/impl/model/order/OrderItemModelImpl.html?line=88#src-88">OrderItemModelImpl.toString()&#160;:&#160;String</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">6.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="AddressModelImpl.toString()&#160;:&#160;String" href="com/example/stripe/impl/model/shipping/AddressModelImpl.html?line=76#src-76">AddressModelImpl.toString()&#160;:&#160;String</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">7.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="AddressModelImpl.hashCode()&#160;:&#160;int" href="com/example/stripe/impl/model/shipping/AddressModelImpl.html?line=101#src-101">AddressModelImpl.hashCode()&#160;:&#160;int</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">8.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ShippingDetailsModelImpl.toString()&#160;:&#160;String" href="com/example/stripe/impl/model/shipping/ShippingDetailsModelImpl.html?line=42#src-42">ShippingDetailsModelImpl.toString()&#160;:&#160;String</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">9.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.85714287</span>85,7%</div><div style="display: table-cell">
+ <div title="85,7% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:85.7%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="OrderServiceImpl.pay(String,String,String,StripeAuthProvider,Integer)&#160;:&#160;OrderModel" href="com/example/stripe/stripe_depended/service/OrderServiceImpl.html?line=65#src-65">OrderServiceImpl.pay(String,String,String,StripeAuthProvider,Integer)&#160;:&#160;OrderModel</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                    </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+                            </div> <!-- tabs-pane active-pane -->
+                        </div>
+
+    <script type="text/javascript" src="jit.js" ></script>
+    <script type="text/javascript" src="treemap-dash-json.js" ></script>
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="http://openclover.org">OpenClover</a> v 4.2.1
+                on Чт апр 19 2018 21:14:29 AST using coverage data from Чт апр 19 2018 21:12:26 AST.
+            </li>
+        </ul>
+        <ul>
+            <li>Clover free edition. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>
