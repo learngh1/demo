@@ -5,4 +5,4 @@ First, [test scenario](src/test/resources/test_suite_source.html) was recorded v
 
 Then scenario was exported to java code and edited for few adjustments due to some difference between firefox and chrome webdriver implementations.
 Running junit test with visible chrome window:
-![alt text](https://image.ibb.co/jX3L7S/sel.gif)
+[this gif has too big size, click to open](https://image.ibb.co/jX3L7S/sel.gif)
