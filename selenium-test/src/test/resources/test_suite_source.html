@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Sample test suite</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login TC</td></tr>
+</thead>
+<tbody>
+<tr><td>store</td><td>admin@domain.com<datalist><option>admin@domain.com</option><option>admin@domain.com</option></datalist></td><td>loginEmail</td>
+</tr>
+<tr><td>open</td><td>http://localhost:8081/#login<datalist><option>http://localhost:8081/#login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=inputEmail<datalist><option>id=inputEmail</option><option>//input[@id='inputEmail']</option><option>//div[@id='content']/div/div/form/div/div/div[2]/div/div/fieldset/div/div[2]/div[3]/input</option><option>//input</option><option>css=#inputEmail</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=inputEmail<datalist><option>id=inputEmail</option><option>//input[@id='inputEmail']</option><option>//div[@id='content']/div/div/form/div/div/div[2]/div/div/fieldset/div/div[2]/div[3]/input</option><option>//input</option><option>css=#inputEmail</option></datalist></td><td>${loginEmail}</td>
+</tr>
+<tr><td>click</td><td>id=inputPassword<datalist><option>id=inputPassword</option><option>//input[@id='inputPassword']</option><option>//div[@id='content']/div/div/form/div/div/div[2]/div/div/fieldset/div/div[2]/div[5]/input</option><option>//div[5]/input</option><option>css=#inputPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=inputPassword<datalist><option>id=inputPassword</option><option>//input[@id='inputPassword']</option><option>//div[@id='content']/div/div/form/div/div/div[2]/div/div/fieldset/div/div[2]/div[5]/input</option><option>//div[5]/input</option><option>css=#inputPassword</option></datalist></td><td>somepassword</td>
+</tr>
+<tr><td>click</td><td>link=Continue<datalist><option>link=Continue</option><option>//a[contains(text(),'Continue')]</option><option>//div[@id='content']/div/div/form/div/div/div[2]/div/div/fieldset/div/div[2]/div[8]/a</option><option>xpath=(//a[contains(@href, 'javascript:;')])[14]</option><option>//div[8]/a</option><option>css=a.btn.login-button.margin-bottom-5.margin-top-10.btn-block.btn-success</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>link=${loginEmail}<datalist><option>link=admin@domain.com</option><option>//a[contains(text(),'admin@domain.com')]</option><option>//li[@id='user-email']/a</option><option>xpath=(//a[contains(@href, 'javascript:;')])[10]</option><option>//ul[3]/li/a</option><option>css=#user-email &gt; a.dropdown-toggle</option><option>class=dropdown-toggle</option><option>link=${loginEmail}</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Navigate to Merchandise TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>link=admin@domain.com<datalist><option>link=admin@domain.com</option><option>//a[contains(text(),'admin@domain.com')]</option><option>//li[@id='user-email']/a</option><option>xpath=(//a[contains(@href, 'javascript:;')])[10]</option><option>//ul[3]/li/a</option><option>css=#user-email &gt; a.dropdown-toggle</option></datalist></td><td></td>
+</tr>
+<tr><td>focus</td><td>link=Merchandise<datalist><option>link=Merchandise</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Merchandise<datalist><option>link=Merchandise</option><option>//a[contains(text(),'Merchandise')]</option><option>//li[@id='user-email']/ul/li[15]/a</option><option>//a[contains(@href, '#merchandise')]</option><option>//li/ul/li[15]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>waitForElementPresent</td><td>//div[@id='content']/div/div/div/div/h3[contains(text(),'Merchandise Editor')]<datalist><option>//div[@id='content']/div/div/div/div/h3[contains(text(),'Merchandise Editor')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//div[@id='content']/div/div/div/div/h3[contains(text(),'Merchandise Editor')]<datalist><option>//div[@id='content']/div/div/div/div/h3</option><option>//h3</option><option>css=h3</option><option>//div[@id='content']/div/div/div/div/h3[contains(text(),'Merchandise Editor')]</option></datalist></td><td>Merchandise Editor &lt;small&gt;&lt;/small&gt;</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create Item 1 with SPD TC</td></tr>
+</thead>
+<tbody>
+<tr><td>store</td><td>Item_1_for_test_spd<datalist><option>Item_1_for_test_spd</option></datalist></td><td>item_1_name</td>
+</tr>
+<tr><td>click</td><td>link=Add<datalist><option>link=Add</option><option>//a[contains(text(),'Add')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a</option><option>xpath=(//a[contains(@href, 'javascript:;')])[22]</option><option>//div/div/div[2]/div/div/a</option><option>css=a.btn.GPCN2XXARC.btn-info</option></datalist></td><td></td>
+</tr>
+<tr><td>focus</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>${item_1_name}</td>
+</tr>
+<tr><td>click</td><td>//div/div[2]/form/fieldset/span/div/label/span[contains(text(),'Shippable')]<datalist><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div/label/span</option><option>//span/div/label/span</option><option>css=div.control-group.GPCN2XXC1D &gt; label.checkbox &gt; span</option><option>//div/div[2]/form/fieldset/span/div/label/span[contains(text(),'Shippable')]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>1</td>
+</tr>
+<tr><td>type</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>2</td>
+</tr>
+<tr><td>type</td><td>id=sc_width<datalist><option>id=sc_width</option><option>//input[@id='sc_width']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[6]/div/input</option><option>//div[6]/div/input</option><option>css=#sc_width</option></datalist></td><td>3</td>
+</tr>
+<tr><td>type</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>4</td>
+</tr>
+<tr><td>click</td><td>//div/div[2]/div/div/a[2]<datalist><option>link=Save</option><option>//a[contains(text(),'Save')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[2]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[23]</option><option>//div[2]/div/div/a[2]</option><option>css=a.btn.GPCN2XXARC.btn-success</option><option>//div/div[2]/div/div/a[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]<datalist><option>//div[@id='gwt-uid-385']/div/div/table/tbody/tr[24]/td/div</option><option>//tr[24]/td/div</option><option>css=td.GPCN2XXA.GPCN2XXCB.GPCN2XXD.GPCN2XXJ &gt; div</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Past Inductees 2017')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'{item_1_name}')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create Item 2 wo SPD TC</td></tr>
+</thead>
+<tbody>
+<tr><td>store</td><td>Item_2_for_test_spd<datalist><option>Item_1_for_test_spd</option><option>Item_2_for_test_spd</option></datalist></td><td>item_2_name</td>
+</tr>
+<tr><td>click</td><td>link=Add<datalist><option>link=Add</option><option>//a[contains(text(),'Add')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a</option><option>xpath=(//a[contains(@href, 'javascript:;')])[22]</option><option>//div/div/div[2]/div/div/a</option><option>css=a.btn.GPCN2XXARC.btn-info</option></datalist></td><td></td>
+</tr>
+<tr><td>assertNotChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>focus</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>${item_2_name}</td>
+</tr>
+<tr><td>click</td><td>link=Save<datalist><option>link=Save</option><option>//a[contains(text(),'Save')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[2]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[23]</option><option>//div[2]/div/div/a[2]</option><option>css=a.btn.GPCN2XXARC.btn-success</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option><option>//div[@id='gwt-uid-385']/div/div/table/tbody/tr[24]/td/div</option><option>//tr[24]/td/div</option><option>css=td.GPCN2XXA.GPCN2XXCB.GPCN2XXD.GPCN2XXJ &gt; div</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Past Inductees 2017')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'{item_1_name}')]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Select Item 1, check spd, set new values TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_1_for_test_spd</td>
+</tr>
+<tr><td>assertChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>1</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>2</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_width<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option><option>id=sc_width</option></datalist></td><td>3</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>4</td>
+</tr>
+<tr><td>type</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>10</td>
+</tr>
+<tr><td>type</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>20</td>
+</tr>
+<tr><td>type</td><td>id=sc_width<datalist><option>id=sc_width</option><option>//input[@id='sc_width']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[6]/div/input</option><option>//div[6]/div/input</option><option>css=#sc_width</option></datalist></td><td>30</td>
+</tr>
+<tr><td>type</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>40</td>
+</tr>
+<tr><td>click</td><td>link=Save<datalist><option>link=Save</option><option>//a[contains(text(),'Save')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[2]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[23]</option><option>//div[2]/div/div/a[2]</option><option>css=a.btn.GPCN2XXARC.btn-success</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Select Item 2, check no spd, set spd TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_2_for_test_spd</td>
+</tr>
+<tr><td>assertNotChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>102</td>
+</tr>
+<tr><td>type</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>202</td>
+</tr>
+<tr><td>type</td><td>id=sc_width<datalist><option>id=sc_width</option><option>//input[@id='sc_width']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[6]/div/input</option><option>//div[6]/div/input</option><option>css=#sc_width</option></datalist></td><td>302</td>
+</tr>
+<tr><td>type</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>402</td>
+</tr>
+<tr><td>click</td><td>link=Save<datalist><option>link=Save</option><option>//a[contains(text(),'Save')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[2]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[23]</option><option>//div[2]/div/div/a[2]</option><option>css=a.btn.GPCN2XXARC.btn-success</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Select Item 1, check spd TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_1_for_test_spd</td>
+</tr>
+<tr><td>assertChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>10</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>20</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_width<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option><option>id=sc_width</option></datalist></td><td>30</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>40</td>
+</tr>
+<tr><td>click</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Save<datalist><option>link=Save</option><option>//a[contains(text(),'Save')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[2]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[23]</option><option>//div[2]/div/div/a[2]</option><option>css=a.btn.GPCN2XXARC.btn-success</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Select Item 2, check spd TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_2_for_test_spd</td>
+</tr>
+<tr><td>assertChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_height<datalist><option>id=sc_height</option><option>//input[@id='sc_height']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[2]/div/input</option><option>//div/div[2]/div/input</option><option>css=#sc_height</option></datalist></td><td>102</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_length<datalist><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>202</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_width<datalist><option>id=sc_width</option><option>id=sc_length</option><option>//input[@id='sc_length']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div/div[4]/div/input</option><option>//div[4]/div/input</option><option>css=#sc_length</option></datalist></td><td>302</td>
+</tr>
+<tr><td>assertValue</td><td>id=sc_weight<datalist><option>id=sc_weight</option><option>//input[@id='sc_weight']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/span/div[2]/div/div[2]/div/div[2]/div/div/input</option><option>//div[2]/div/div/input</option><option>css=#sc_weight</option></datalist></td><td>402</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Select Item 1, check no spd TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_1_for_test_spd</td>
+</tr>
+<tr><td>assertNotChecked</td><td>id=cb_shippable<datalist><option>id=cb_shippable</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Delete Item 1 TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_1_for_test_spd</td>
+</tr>
+<tr><td>click</td><td>link=Delete<datalist><option>link=Delete</option><option>//a[contains(text(),'Delete')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[3]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[24]</option><option>//div[2]/div/div/a[3]</option><option>css=a.btn.GPCN2XXBRC.btn-danger</option></datalist></td><td></td>
+</tr>
+<tr><td>waitForElementPresent</td><td>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]<datalist><option>class="btn GPCN2XXARC btn-danger"</option><option>css=a:contains("Delete")</option><option>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]<datalist><option>class="btn GPCN2XXARC btn-danger"</option><option>css=a:contains("Delete")</option><option>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementNotPresent</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Delete Item 2 TC</td></tr>
+</thead>
+<tbody>
+<tr><td>click</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'${item_1_name}')]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=name<datalist><option>id=name</option><option>//input[@id='name']</option><option>//div[@id='gwt-uid-385']/div/div[2]/form/fieldset/div[2]/div/input</option><option>//div[2]/div/input</option><option>css=#name</option></datalist></td><td>Item_2_for_test_spd</td>
+</tr>
+<tr><td>click</td><td>link=Delete<datalist><option>link=Delete</option><option>//a[contains(text(),'Delete')]</option><option>//div[@id='gwt-uid-385']/div/div[2]/div/div/a[3]</option><option>xpath=(//a[contains(@href, 'javascript:;')])[24]</option><option>//div[2]/div/div/a[3]</option><option>css=a.btn.GPCN2XXBRC.btn-danger</option></datalist></td><td></td>
+</tr>
+<tr><td>waitForElementPresent</td><td>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]<datalist><option>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]</option><option>class="btn GPCN2XXARC btn-danger"</option><option>css=a:contains("Delete")</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]<datalist><option>//html/body/div[5]/div/div[2]/div/div/div/div[3]/div[3]/a[1]</option><option>class="btn GPCN2XXARC btn-danger"</option><option>css=a:contains("Delete")</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementNotPresent</td><td>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]<datalist><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_1_for_test_spd')]</option><option>//div/div/table/tbody/tr/td/div[contains(text(),'Item_2_for_test_spd')]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
